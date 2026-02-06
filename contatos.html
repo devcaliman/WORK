@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Contato | Portfólio{% endblock %}
+
+{% block content %}
+<h2>Contato</h2>
+
+<p>
+    Se quiser conversar sobre projetos, oportunidades ou colaboração,
+    é só chamar:
+</p>
+
+<ul>
+    <li>Email: dev.vitorcaliman@gmail.com</li>
+    <li>
+        GitHub:
+        <a href="https://github.com/devcaliman" target="_blank">
+            github.com/devcaliman
+        </a>
+    </li>
+    <li>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/vitor-caliman-773ba82a80/" target="_blank">
+            linkedin.com/in/vitor-caliman
+        </a>
+    </li>
+</ul>
+<h3>Alguns trabalhos</h3>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="{{ url_for('static', filename='img/test3.jpg') }}" alt="Trabalho 1">
+        <div class="caption"></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="{{ url_for('static', filename='img/test4.jpg') }}" alt="Trabalho 2">
+        <div class="caption"></div>
+    </div>
+</div>
+{% endblock %}
