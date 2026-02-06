@@ -1,1 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Início | Portfólio{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-text">
+        <h1>Desenvolvedor Full Stack</h1>
+        <p>
+            Me chamo Vitor Ramos, este na foto ao lado sou eu.
+            Sou um Dev Full Stack pronto para solucionar seus problemas
+            com soluções web eficientes e bem estruturadas.
+        </p>
+
+        <a href="{{ url_for('projetos') }}" class="btn">Ver meus projetos</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='img/vitor.jpg') }}" alt="Foto de Vitor Ramos">
+    </div>
+</section>
+<section>
+    <h1>Desenvolvedor Full Stack</h1>
+    <p>
+        Crio aplicações web escaláveis, performáticas e focadas em resolver
+        problemas reais de negócio.
+    </p>
+
+    <a href="{{ url_for('projetos') }}">Ver projetos</a>
+</section>
+
+<section>
+    <h2>Como eu trabalho</h2>
+    <ul>
+        <li>Penso no problema antes da tecnologia</li>
+        <li>Escrevo código que outro dev consegue entender</li>
+        <li>Entrego soluções simples antes de soluções complexas</li>
+    </ul>
+</section>
+{% endblock %}
 
