@@ -1,0 +1,255 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CORPO DO SITE */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #feffc1;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* CONTAINER CENTRAL */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: reverse, 2;
+    box-shadow: 12px 4px 12px, #000000;
+}
+
+.logo a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #222;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #0077cc;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    margin-top: 40px;
+}
+
+/* TÍTULOS */
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 40px 0 15px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* PARÁGRAFOS */
+p {
+    margin-bottom: 15px;
+}
+
+/* LISTAS */
+ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* LINKS GERAIS */
+a {
+    color: #0077cc;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* BOTÃO SIMPLES (para "Ver projetos") */
+section a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background-color: #0077cc;
+    color: #feffc1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.692);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.4s ease-in-out;
+}
+
+section a:hover {
+    background-color: #005fa3;
+}
+
+/* CARDS DE PROJETO */
+article {
+    background: #feffc1;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* RODAPÉ */
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+/* HERO SECTION (INTRO COM FOTO) */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 260px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    background-color: #0077cc;
+    color: #feffc1;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #005fa3;
+}
+/* GALERIA DE IMAGENS */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    background: #ffffff00;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(255, 251, 0, 0.527);
+    transition: transform 0.15s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: translateY(-3px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item .caption {
+    padding: 12px 14px;
+    font-size: 15px;
+}
+
+/* RESPONSIVO: no celular vira 1 coluna */
+@media (max-width: 720px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Espaçamento padrão entre seções */
+  .section {
+    padding: 70px 0;
+  }
+  
+  /* Quando você clica e a seção vira #target */
+  .section:target {
+    animation: fadeInUp 0.6s ease both;
+  }
+  
+  /* Animação: aparece e sobe levemente */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .section:target {
+    animation: fadeInUp 0.6s ease both;
+    outline: 2px solid rgba(0, 119, 204, 0.25);
+    outline-offset: 10px;
+    border-radius: 12px;
+  }
+  
