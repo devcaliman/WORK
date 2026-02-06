@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Projetos | Portfólio{% endblock %}
+
+{% block content %}
+<h2>Projetos</h2>
+
+<article>
+    <h3>Sistema de Gestão X</h3>
+
+    <p>
+        <strong>Problema:</strong>
+        Controle manual e falho de dados, gerando erros e retrabalho.
+    </p>
+
+    <p>
+        <strong>Solução:</strong>
+        Aplicação web com autenticação, CRUD completo e dashboard para visualização
+        de dados.
+    </p>
+
+    <p>
+        <strong>Tecnologias:</strong>
+        Flask, SQLAlchemy, HTML, CSS, JavaScript
+    </p>
+    <h2>Projetos</h2>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='img/test1.jpg') }}" alt="Projeto 1">
+            <div class="caption"></div>
+        </div>
+    
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='img/test2.jpg') }}" alt="Projeto 2">
+            <div class="caption"></div>
+        </div>
+    </div>
+    
+    <p>
+        <a href="https://github.com/devcaliman/meus-trabalhos" target="_blank">
+            Código no GitHub
+        </a>
+    </p>
+</article>
+{% endblock %}
